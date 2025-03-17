@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-columns: repeat(3, 350px);
+    gap: 20px;
+}
+
+.contentCard {
+    width: 1130px;
+}
