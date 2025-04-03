@@ -1,0 +1,10 @@
+.list {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    li {
+        padding: 5px 0px;
+        border-bottom: var(--border);
+    }
+}

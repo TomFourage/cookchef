@@ -1,7 +1,8 @@
 import styles from "./Header.module.scss";
-import logo from "../assets/images/logo.svg";
+import logo from "../../assets/images/logo.svg";
 import { useState } from "react";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
+import { NavLink } from "react-router-dom";
 
 //<i class="fa-solid fa-bars"></i>
 
@@ -10,10 +11,16 @@ function Header() {
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
       <div className="flex-fill">
-        <img src={logo} alt="logo cookchef" />
+        <NavLink to="/">
+          <img src={logo} alt="logo cookchef" />
+        </NavLink>
       </div>
       <ul className={styles.headerList}>
-        <button className="mr-5 btn btn-reverse-primary">
+        <NavLink to="/admin">
+          <button className="btn btn-primary mr-15">Admin</button>
+        </NavLink>
+
+        <button className="mr-15 btn btn-reverse-primary">
           <i className="fa-solid fa-heart mr-5"></i>
           <span>Wishlist</span>
         </button>
